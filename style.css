@@ -1,0 +1,530 @@
+/* Reset y body */
+* {
+  margin:0; 
+  padding:0; 
+  box-sizing:border-box;}
+body {
+  font-family:"monserrat", sans-serif;
+  background: linear-gradient(white);
+ 
+}
+
+
+
+
+
+
+/* Header */
+header {
+  position:fixed;
+   width:100%;
+    top:0;
+     background: #022285;
+  padding:15px 20px; 
+  display:flex;
+   justify-content:space-between; 
+   align-items:center;
+    z-index:1000;
+}
+.logo { 
+  height:80px;
+  border-radius: 8px;
+ }
+
+header nav { 
+  display:flex; 
+  gap:20px; 
+ 
+}
+header nav a { 
+  text-decoration:none;
+  color: white;
+  transition:0.3s;
+ }
+header nav a:hover { color: rgb(249, 22, 22); }
+
+.menu-btn {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+/* Hero */
+.hero { height:90vh;
+   display:flex; 
+   justify-content:center;
+    align-items:center; 
+    text-align:center;
+       background: url('images/IMG_8398.jpeg');
+      background-size: cover;
+      min-height: 80vh;
+      position: relative;
+      }
+.hero::after { content:""; 
+  position:absolute; 
+  top:0;;
+   left:0; 
+  right:0; 
+  bottom:0; 
+  background:rgba(0,0,0,0.4);
+}
+.hero-content { 
+  position:relative;
+   z-index:1; 
+  }
+.hero-content h2 { 
+  font-size:60px;
+  color: rgb(255, 255, 255);
+   margin-bottom:150px;
+   animation:glow 2s infinite alternate; 
+  }
+  .hero-content p {
+    color:rgb(187, 14, 14);
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+@keyframes glow { from{ text-shadow:0 0 10px white,0 0 20px white; } to{ text-shadow:0 0 20px black,0 0 30px blue; } }
+
+
+
+.address {
+text-align: center;
+
+}
+
+.h3text {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+
+.address-text {
+color: black;
+text-align:center;
+font-size: 30px;
+margin-bottom: 20px;
+justify-content: space-between;
+}
+
+
+
+.button {
+  margin-top: 18px;
+ 
+}
+
+
+
+
+
+.container-pastorinfo {
+
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  border: #e30d0d;
+  margin:  0 auto;
+  margin-top: 70px;
+}
+
+.pastor-title {
+  font-family: sans-serif;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-left: 100px;
+
+}
+
+.pastor-description {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  margin-left: 100px;
+  padding-right: 30px; 
+  padding-top: 30px;
+  text-align: justify;
+}
+ 
+.photo {
+height: 400px;
+margin-right: 150px;
+
+}
+
+
+
+.servicios{
+  background-color: rgb(4, 4, 158);
+  margin-top: 20px;
+}
+/* Sections */
+
+h2 { 
+  padding-top: 80px;
+  text-align:center; 
+  font-size:40px; 
+  margin-bottom:40px; 
+  color:rgb(242, 9, 9);
+ }
+
+.texto { 
+  text-align:center; 
+  margin:auto; 
+  color: rgb(0, 38, 104);}
+
+  .section2 {
+background-color:#022285;
+
+ 
+margin-bottom: 20px;
+
+  }
+
+.nuestros-servicios {
+ font-size: 40px;
+ text-align: center;
+ padding-top: 100px;
+}
+
+.button-2 {
+width: 200px;
+margin-left: 640px;
+font-size: 26px;
+}
+ @media (max-width:800px) {
+  .button-2 {
+    margin-left: 170px;
+    
+  }
+ }
+
+.section1 {
+  background-color: #022285; 
+  height: 500px;
+}
+.text-3 {
+  color:antiquewhite
+}
+.button-3 {
+  width: 500px;
+  font-size: 26px;
+  align-self: center;
+  margin-left: 500px;
+}
+ @media (max-width:800px) {
+  .button-3 {
+ margin: auto;
+    
+  }
+ }
+
+/* Fade-in al hacer scroll */
+.fade-in { 
+  opacity:0; 
+  transform:translateY(30px); 
+  transition: all 1s ease-out;
+ }
+.fade-in.show {
+   opacity:1; 
+   transform:translateY(0);
+   }
+
+/* Servicios */
+.servicios { 
+  display:grid; 
+  grid-template-columns:repeat; 
+  gap:20px;
+color:antiquewhite;
+ }
+
+.card {
+   background:rgba(255,255,255,0.05); 
+  padding:20px; 
+  border-radius:10px;
+   text-align:center;
+    transition:transform 0.3s,box-shadow 0.3s;
+   }
+.card:hover { 
+  transform:translateY(-10px) scale(1.05); 
+  box-shadow:0 0 20px antiquewhite; 
+}
+
+/* Slider galería */
+.slider { 
+  position:relative;
+    max-width:500px; 
+    max-height: 500px;
+   margin:auto;
+    overflow:hidden; }
+.slides { display:flex; transition: transform 0.5s ease-in-out; }
+.slides img {
+  max-width:100%; 
+  height: auto;
+  object-fit: contain;
+  border-radius:10px; 
+  flex-shrink:0; }
+.prev, .next {
+  position:absolute; top:50%; transform:translateY(-50%);
+  background:rgba(0,0,0,0.5); color:#fff; border:none; padding:10px; cursor:pointer; border-radius:50%;
+}
+.prev { left:10px; } .next { right:10px; }
+
+/* Formulario */
+form { 
+  display:flex; 
+  flex-direction:column;
+   max-width:600px; 
+   margin:auto;
+    gap:15px; 
+   margin-bottom: 50px;
+  }
+
+input,textarea {
+   padding:12px;
+   color: #080707;
+    border-color: #080707;
+     border-radius:8px; 
+     outline:none; 
+     font-size:16px; }
+button { 
+  background:#022285;
+  border:none; 
+  padding:12px; 
+  border-radius:8px;
+  font-size:18px; 
+  cursor:pointer; 
+  transition:0.3s; 
+  color: white;
+}
+button:hover { background:red; }
+
+
+.footer-1 {
+  background-color:#022285;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.iddpmi {
+  margin-left: 150px;
+  font-size: 30px;
+  color: aliceblue;
+}
+
+.jesuseselcamino {
+  font-size: 30px;
+  color: aliceblue;
+  margin-left: 60px;
+
+}
+
+.email {
+  font-size: 16px;
+  color: antiquewhite;
+  padding-top: 100px;
+}
+
+.phone {
+  font-size: 16px;
+  color: antiquewhite;
+  padding-top: 20px;
+  text-decoration: none;
+  padding-left: 20px;
+}
+
+.direccion-footer {
+  font-size: 16px;
+  color: antiquewhite;
+  padding-top: 20px;
+}
+
+.nacion {
+  font-size: 16px;
+  color: antiquewhite;
+  padding-right: 10px;
+}
+
+   .logo-2 {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+   
+   }
+
+     
+   @media (max-width:800px) {
+    .footer-1 {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      font-size: 14px;
+      padding-bottom: 10px;
+      padding-top: 20px;
+    }
+   }
+   .footer-2 {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color:white;
+    font-size: 12px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    background-color: #022285;
+    align-items: center;
+   }
+
+   @media (max-width:800px) {
+    .footer-2 {
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      font-size: 1em;
+      padding-bottom: 100px;
+     
+    }
+   }
+
+
+/* Controles animación */
+.controls { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); display:flex; gap:10px; z-index:2; }
+.controls button { background:#00d4ff; border:none; padding:10px 20px; border-radius:6px; cursor:pointer; font-weight:bold; }
+.controls button:hover { background:#ff00ff; }
+
+/* Responsive */
+@media screen and (max-width:768px){
+  header nav { 
+    display:none; 
+    flex-direction:column; 
+    background:#022285; 
+    position:absolute;
+    top:80px; 
+    right:0;
+    padding:15px;
+    border-radius: 8px; 
+    text-align: right;
+    
+    
+    
+    
+  }
+
+  nav a {
+    margin: 10px 0;
+    display: block;
+    
+  }
+  nav.active {
+    display:flex !important;
+  }
+  .menu-btn {
+    display: block;
+     cursor:pointer; 
+     font-size:2rem; 
+     color:white;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+  .texto-biblico {
+    font-size: 1em;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+    .container-pastorinfo {
+    display: flex;
+    justify-content: center;
+flex-direction: column;
+   
+
+   }
+
+  .pastor-title {
+    font-size: 1.5em;}
+   .pastor-description {
+    font-size: 1.5em;
+    text-align: justify;
+   }
+ 
+   .photo { 
+ margin-left: 130px;
+
+   }
+    
+  }
+
+  /*Pagina de Creemos.html*/
+
+  
+  
+    .logo-3{ height:60px; }
+    nav { 
+      display:flex;
+     gap:20px; }
+ nav a { 
+  text-decoration:none;
+   color: rgb(58, 109, 218);
+    transition:0.3s;
+   }
+nav a:hover { color: rgb(249, 22, 22); }
+
+  
+
+  header-2 {
+  position:fixed;
+   width:100%;
+    top:0;
+     background: rgb(152, 229, 243);
+  padding:15px 20px; 
+  display:flex;
+   justify-content:space-between; 
+   align-items:center;
+    z-index:1000;
+  
+}
+.hero-2 { height:90vh;
+   display:flex; 
+   justify-content:center;
+    align-items:center; 
+    text-align:center;
+       background: url('imagines-creemos/vecteezy_open-book-illuminated-by-light-beam-on-dark-background-concept_70871368.jpg');
+      background-size: cover;
+      min-height: 40vh;
+      position: relative;
+      
+      }
+      .hero-2::after { content:""; 
+  position:absolute; 
+  top:0;; 
+  left:0; 
+  right:0; 
+  bottom:0; 
+  background:rgba(0,0,0,0.1);
+}
+.hero-2-content { 
+  position:relative;
+   z-index:1; 
+  }
+  .hero-2-content h2 { 
+  font-size:60px;
+  color: rgb(230, 226, 226);
+   margin-bottom:150px;
+   animation:glow 2s infinite alternate; 
+  }
+
+
+ 
+@keyframes glow { from{ text-shadow:0 0 10px white,0 0 20px white; } to{ text-shadow:0 0 20px black,0 0 30px blue; } }
