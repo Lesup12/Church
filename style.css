@@ -6,6 +6,10 @@
 body {
   font-family:"monserrat", sans-serif;
   background: linear-gradient(white);
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+
  
 }
 
@@ -19,7 +23,7 @@ header {
   position:fixed;
    width:100%;
     top:0;
-     background: #022285;
+     background: white;
   padding:15px 20px; 
   display:flex;
    justify-content:space-between; 
@@ -38,12 +42,13 @@ header nav {
 }
 header nav a { 
   text-decoration:none;
-  color: white;
+  color: #022285;
   transition:0.3s;
  }
 header nav a:hover { color: rgb(249, 22, 22); }
 
 .menu-btn {
+  margin-right: 10px;
   display: none;
   font-size: 2rem;
   color: white;
@@ -58,6 +63,8 @@ header nav a:hover { color: rgb(249, 22, 22); }
     align-items:center; 
     text-align:center;
        background: url('images/IMG_8398.jpeg');
+       background-position: center center;
+       background-repeat: no-repeat;
       background-size: cover;
       min-height: 80vh;
       position: relative;
@@ -75,7 +82,7 @@ header nav a:hover { color: rgb(249, 22, 22); }
    z-index:1; 
   }
 .hero-content h2 { 
-  font-size:60px;
+  font-size:48px;
   color: rgb(255, 255, 255);
    margin-bottom:150px;
    animation:glow 2s infinite alternate; 
@@ -104,7 +111,7 @@ text-align: center;
 .address-text {
 color: black;
 text-align:center;
-font-size: 30px;
+font-size: 25px;
 margin-bottom: 20px;
 justify-content: space-between;
 }
@@ -133,23 +140,26 @@ justify-content: space-between;
 .pastor-title {
   font-family: sans-serif;
   font-size: 20px;
-  padding-left: 10px;
-  margin-left: 100px;
-
+  margin: 20px auto;
+  padding: 0 15px;
+  max-width: 90%;
 }
 
 .pastor-description {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: sans-serif;
   font-size: 20px;
-  margin-left: 100px;
-  padding-right: 30px; 
-  padding-top: 30px;
+  margin:20px auto;
+  padding: 0 15px;
+  max-width: 90%;
   text-align: justify;
 }
  
 .photo {
-height: 400px;
-margin-right: 150px;
+height: auto;
+max-width: 100%;
+margin: 20px auto;
+display: block;
+
 
 }
 
@@ -162,9 +172,10 @@ margin-right: 150px;
 /* Sections */
 
 h2 { 
+  margin: auto;
   padding-top: 80px;
   text-align:center; 
-  font-size:40px; 
+  font-size:32px; 
   margin-bottom:40px; 
   color:rgb(242, 9, 9);
  }
@@ -189,13 +200,15 @@ margin-bottom: 20px;
 }
 
 .button-2 {
-width: 200px;
-margin-left: 640px;
+width: 100%;
+max-width: 300px;
+margin: 20px auto;
+display: block;
 font-size: 26px;
 }
- @media (max-width:800px) {
+ @media screen and (max-width:768px) {
   .button-2 {
-    margin-left: 170px;
+    margin: 20px auto;
     
   }
  }
@@ -208,12 +221,14 @@ font-size: 26px;
   color:antiquewhite
 }
 .button-3 {
-  width: 500px;
+  width: 100%;
+  max-width: 300px;
   font-size: 26px;
   align-self: center;
-  margin-left: 500px;
+margin: 20px auto;
+display: block;
 }
- @media (max-width:800px) {
+ @media screen and (max-width:768px) {
   .button-3 {
  margin: auto;
     
@@ -234,7 +249,7 @@ font-size: 26px;
 /* Servicios */
 .servicios { 
   display:grid; 
-  grid-template-columns:repeat; 
+  grid-template-columns:repeat(auto-fit,minmax(250px, 1fr)); 
   gap:20px;
 color:antiquewhite;
  }
@@ -254,17 +269,16 @@ color:antiquewhite;
 /* Slider galería */
 .slider { 
   position:relative;
-    max-width:500px; 
-    max-height: 500px;
+    max-width:800px; 
    margin:auto;
     overflow:hidden; }
 .slides { display:flex; transition: transform 0.5s ease-in-out; }
 .slides img {
   max-width:100%; 
-  height: auto;
-  object-fit: contain;
   border-radius:10px; 
-  flex-shrink:0; }
+  flex-shrink:0;
+ }
+
 .prev, .next {
   position:absolute; top:50%; transform:translateY(-50%);
   background:rgba(0,0,0,0.5); color:#fff; border:none; padding:10px; cursor:pointer; border-radius:50%;
@@ -303,8 +317,10 @@ button:hover { background:red; }
 
 .footer-1 {
   background-color:#022285;
-  display: flex;
-  justify-content: space-between;
+  display:grid;
+  text-align: center;
+  
+  gap: 10px;
   flex-direction: row;
   align-items: center;
   padding-top: 20px;
@@ -313,7 +329,8 @@ button:hover { background:red; }
 }
 
 .iddpmi {
-  margin-left: 150px;
+  margin:10px auto;
+  text-align: center;
   font-size: 30px;
   color: aliceblue;
 }
@@ -321,17 +338,22 @@ button:hover { background:red; }
 .jesuseselcamino {
   font-size: 30px;
   color: aliceblue;
-  margin-left: 60px;
+  margin: 10px auto;
+  text-align: center;
 
 }
-
 .email {
+  color: antiquewhite;
+}
+
+.email a {
   font-size: 16px;
   color: antiquewhite;
   padding-top: 100px;
+  text-decoration: none;
 }
 
-.phone {
+.phone a {
   font-size: 16px;
   color: antiquewhite;
   padding-top: 20px;
@@ -359,7 +381,7 @@ button:hover { background:red; }
    }
 
      
-   @media (max-width:800px) {
+   @media screen and (max-width:768px) {
     .footer-1 {
       flex-direction: column;
       gap: 20px;
@@ -367,6 +389,15 @@ button:hover { background:red; }
       font-size: 14px;
       padding-bottom: 10px;
       padding-top: 20px;
+      text-align: center;
+    }
+    .logo-2 {
+      width: 130px;
+      height: 130px;
+    }
+    .phone a {
+      text-decoration: none;
+      color: antiquewhite;
     }
    }
    .footer-2 {
@@ -377,18 +408,20 @@ button:hover { background:red; }
     color:white;
     font-size: 12px;
     padding-top: 100px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     background-color: #022285;
     align-items: center;
+   
    }
 
-   @media (max-width:800px) {
+   @media screen and (max-width:768px) {
     .footer-2 {
       flex-direction: column;
       gap: 40px;
       align-items: center;
-      font-size: 1em;
-      padding-bottom: 100px;
+      font-size: 14px;
+      padding-bottom: 150px;
+      text-align: center;
      
     }
    }
@@ -412,37 +445,38 @@ button:hover { background:red; }
     border-radius: 8px; 
     text-align: right;
     
-    
-    
-    
   }
+ 
 
-  nav a {
+ header nav a {
     margin: 10px 0;
     display: block;
+    color: antiquewhite;
+   
     
   }
   nav.active {
     display:flex !important;
   }
   .menu-btn {
+    margin-right: 20px;
     display: block;
      cursor:pointer; 
      font-size:2rem; 
-     color:white;
+     color:#022285;
     }
     
 }
 
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .texto-biblico {
     font-size: 1em;
   }
 }
 
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     .container-pastorinfo {
     display: flex;
@@ -453,14 +487,16 @@ flex-direction: column;
    }
 
   .pastor-title {
-    font-size: 1.5em;}
+    font-size: 1.4em;}
    .pastor-description {
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: justify;
+    justify-content: center;
    }
  
    .photo { 
- margin-left: 130px;
+ margin:10px auto;
+ max-width: 150px;
 
    }
     
