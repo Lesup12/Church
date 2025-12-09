@@ -14,9 +14,49 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+  
+//mision animacion//
+
+  // Intersection Observer para detectar cuando las tarjetas entran en la vista
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observar todas las tarjetas
+        document.querySelectorAll('.card').forEach(card => {
+            observer.observe(card);
+        });
 
 
+//vision animacion//
 
+// IntersectionObserver para activar animación desde la derecha
+const observerVision = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
+
+// Observar la tarjeta principal de visión
+document.querySelectorAll('.card-vision').forEach(el => observerVision.observe(el));
+
+// Observar el cuadro de cita
+document.querySelectorAll('.quote-box-vision').forEach(el => observerVision.observe(el));
+
+
+        
 
 // Marca de agua animación
 function setAnimation(type){
@@ -50,3 +90,5 @@ window.addEventListener('scroll',()=>{
   });
 });
 
+
+//la oracion pagina//
