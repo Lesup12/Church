@@ -1144,32 +1144,37 @@ flex-direction: column;
  
 
 
- .maintext { 
-  margin: auto;
-  padding-top: 50px;
-  text-align:center; 
-  font-size:2.25rem; 
-  margin-bottom:40px; 
-  color:#022285;
- }
+  .maintext { 
+   margin: 40px auto 25px;
+   padding-top: 30px;
+   padding-bottom: 15px;
+   text-align:center; 
+   font-size:2.25rem; 
+   color: white;
+   background-color: #e53e3e;
+   border-radius: 10px;
+   max-width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+  }
 
- .columnstext {
-  margin: auto;
-  padding-top: 80px;
-  text-align: center;
-  font-size: larger;
-  color: #18157c;
-  
- }
+  .columnstext {
+   margin: auto;
+   padding-top: 20px;
+   text-align: center;
+   font-size: larger;
+   color: #18157c;
+   
+  }
 
- .columnstext2 {
-  margin:auto;
-  padding-top: 20px;
-  text-align: center;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  
- }
+  .columnstext2 {
+   margin:auto;
+   padding-top: 10px;
+   text-align: center;
+   font-size: 1.25rem;
+   line-height: 1.5;
+   
+  }
 
  .columnstext3 {
   margin: auto;
@@ -1183,13 +1188,13 @@ flex-direction: column;
    margin: auto;
    justify-content: center;
    text-align: center;
-   padding: 20px 50px 40px;
+   padding: 20px 50px 10px;
    background-color: rgba(24, 21, 124, 0.07);
   }
 
   @media (max-width: 768px) {
       .conocesajesuscontenedor {
-          padding: 20px 20px 40px;
+          padding: 20px 20px 10px;
       }
   }
 
