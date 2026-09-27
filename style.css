@@ -1012,10 +1012,13 @@ text-decoration: none;
     margin-bottom: 30px;
 }
 
-.oracion-button {
-    text-align: center;
-    justify-content: center;
+.oracion-buttons {
     grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
 }
 
 
@@ -1046,6 +1049,8 @@ input,textarea {
   cursor:pointer; 
   transition:0.3s; 
   color: white;
+  text-decoration: none;
+  display: inline-block;
 }
 .button:hover { background:red; }
 
@@ -1980,5 +1985,232 @@ button:hover { background:red; }
     100% { transform: rotate(360deg); }
 }
 
+/* Definición de la animación de rotación */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /* PAGINA DE EVENTOS.HTML */
+
+/* PETICION DE ORACION PAGE */
+.peticion-hero {
+    background: linear-gradient(135deg, #022285 0%, #1a3a8f 100%);
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.peticion-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.peticion-titulo {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.peticion-subheadings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.peticion-sub-left h2,
+.peticion-sub-right h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+    color: white;
+}
+
+.peticion-sub-left {
+    padding-right: 20px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.highlight-red {
+    color: #ff6b6b;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .peticion-titulo {
+        font-size: 2.2rem;
+    }
+    .peticion-subheadings {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    .peticion-sub-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+}
+
+/* Peticion Imagen Section */
+.peticion-imagen {
+    padding: 60px 20px;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.peticion-foto {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    border: 4px solid white;
+}
+
+/* Peticion Form Section */
+.peticion-form-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #eef0f4 100%);
+}
+
+.peticion-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-titulo {
+    font-size: 2.5rem;
+    color: #022285;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.form-titulo::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #e53e3e;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.peticion-form {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255,255,255,0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #022285;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #022285;
+    box-shadow: 0 0 0 3px rgba(2,34,133,0.15);
+    background: white;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 10px;
+}
+
+.form-consent input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #e53e3e;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.form-consent label {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.button-submit {
+    background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(229,62,62,0.3);
+    margin-top: 10px;
+}
+
+.button-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(229,62,62,0.4);
+}
+
+.button-primary {
+    background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+    box-shadow: 0 4px 15px rgba(229,62,62,0.3);
+}
+
+.button-primary:hover {
+    background: linear-gradient(135deg, #c53030 0%, #a02828 100%);
+    box-shadow: 0 6px 20px rgba(229,62,62,0.4);
+}
 
