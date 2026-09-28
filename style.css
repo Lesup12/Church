@@ -1991,6 +1991,159 @@ button:hover { background:red; }
     100% { transform: rotate(360deg); }
 }
 
+/* YOUTUBE LIVE STREAM */
+.youtube-live {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #eef0f4 100%);
+}
+
+.youtube-live-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.youtube-live-titulo {
+    font-size: 2.5rem;
+    color: #022285;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.youtube-live-titulo .live-time {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 6px 16px;
+    background: #e53e3e;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    vertical-align: middle;
+    box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3); }
+    50% { box-shadow: 0 4px 25px rgba(229, 62, 62, 0.6); }
+    100% { box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3); }
+}
+
+.youtube-live-titulo::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #e53e3e;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.youtube-live-video {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    border: 4px solid white;
+}
+
+.youtube-live-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 16px;
+}
+
+.youtube-live-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 16px;
+}
+
+.youtube-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    cursor: pointer;
+    z-index: 10;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    border-radius: 16px;
+}
+
+.youtube-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.overlay-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(229, 62, 62, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+    box-shadow: 0 8px 30px rgba(229, 62, 62, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    pointer-events: none;
+    text-shadow: 2px 0 0 white;
+}
+
+.youtube-overlay:hover .play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 12px 40px rgba(229, 62, 62, 0.7);
+}
+
+@media (max-width: 768px) {
+    .play-button {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+}
+
+.youtube-live-info {
+    margin-top: 20px;
+    color: #666;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .youtube-live-titulo {
+        font-size: 2rem;
+    }
+}
+
 /* PAGINA DE EVENTOS.HTML */
 
 /* PETICION DE ORACION PAGE */
