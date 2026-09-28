@@ -81,21 +81,7 @@ window.addEventListener('load', checkFaders);
 checkFaders();
 
 
-// YouTube Live Overlay - Click to play
-const youtubeOverlay = document.getElementById('youtubeOverlay');
-const youtubeIframe = document.querySelector('.youtube-live-video iframe');
 
-if (youtubeOverlay && youtubeIframe) {
-    youtubeOverlay.addEventListener('click', () => {
-        youtubeOverlay.classList.add('hidden');
-        // Add autoplay to the iframe src when clicked
-        const currentSrc = youtubeIframe.src;
-        if (!currentSrc.includes('autoplay=1')) {
-            const separator = currentSrc.includes('?') ? '&' : '?';
-            youtubeIframe.src = currentSrc + separator + 'autoplay=1';
-        }
-    });
-}
 
 
 
