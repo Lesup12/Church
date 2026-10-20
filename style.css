@@ -336,7 +336,7 @@ header nav a:hover {
 .eventos-imagen-container {
     position: relative;
     display: inline-block;
-    max-width: 300px;
+max-width: 600px;
     width: 85%;
     margin: 0 auto 25px;
 }
@@ -1989,96 +1989,6 @@ button:hover { background:red; }
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-/* YOUTUBE LIVE STREAM */
-.youtube-live {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #eef0f4 100%);
-}
-
-.youtube-live-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.youtube-live-titulo {
-    font-size: 2.5rem;
-    color: #022285;
-    font-weight: 700;
-    margin-bottom: 30px;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.youtube-live-titulo .live-time {
-    display: inline-block;
-    margin-left: 15px;
-    padding: 6px 16px;
-    background: #e53e3e;
-    color: white;
-    border-radius: 20px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    vertical-align: middle;
-    box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3); }
-    50% { box-shadow: 0 4px 25px rgba(229, 62, 62, 0.6); }
-    100% { box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3); }
-}
-
-.youtube-live-titulo::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #e53e3e;
-    margin: 15px auto 0;
-    border-radius: 2px;
-}
-
-.youtube-live-video {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    aspect-ratio: 16 / 9;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-    border: 4px solid white;
-}
-
-.youtube-live-video iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 16px;
-}
-
-.youtube-live-video iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 16px;
-}
-
-.youtube-live-info {
-    margin-top: 20px;
-    color: #666;
-    font-size: 1rem;
-    font-style: italic;
-}
-
-@media (max-width: 768px) {
-    .youtube-live-titulo {
-        font-size: 2rem;
-    }
 }
 
 /* PAGINA DE EVENTOS.HTML */
